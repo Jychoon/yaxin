@@ -4,7 +4,7 @@ spring:
   application:
     name: service-provider-heartfailure
   datasource:
-    url: jdbc:mysql://localhost:3306/gi?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/yaxin_v2?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: 1998918Jyc
     driver-class-name: com.mysql.cj.jdbc.Driver
