@@ -10,14 +10,11 @@ import java.util.HashMap;
 
 @CrossOrigin
 @RestController
-public class IndexController {
-
+public class PatInfoController {
     @Autowired
     RestTemplate restTemplate;
-
-    @GetMapping("/login")
-    public Boolean index(){
-        return restTemplate.getForObject("http://service-provider-heartfailure/login",Boolean.class);
+    @GetMapping("/getPatInfo")
+    public HashMap getPatInfo(){
+        return restTemplate.getForObject("http://service-provider-heartfailure/getPatInfo",HashMap.class);
     }
-
 }

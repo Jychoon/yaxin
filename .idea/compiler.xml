@@ -9,6 +9,7 @@
         <module name="eureka-server" />
         <module name="service-consumer" />
         <module name="service-provider-heartfailure" />
+        <module name="yaxin-mircoservice" />
         <module name="yaxinmircoservice" />
       </profile>
     </annotationProcessing>
