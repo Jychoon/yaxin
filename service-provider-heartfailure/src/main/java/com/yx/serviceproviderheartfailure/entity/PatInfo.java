@@ -6,11 +6,17 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+@Data
+class PatInfoKey implements Serializable{
+    private String orgId;
+    private String medRecordId;
+}
+
 @Entity
-@IdClass(PatInfoPrimaryKey.class)
+@IdClass(PatInfoKey.class)
 @Table(name = "pat_info")
 @Data
-public class PatInfo{
+public class PatInfo implements Serializable{
     @Id
     private String orgId;
     @Id

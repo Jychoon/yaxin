@@ -12,12 +12,13 @@ import java.util.Map;
 public class PatInfoController {
     @Autowired
     RestTemplate restTemplate;
+    private static String providerUrl="http://service-provider-heartfailure";
     @GetMapping("/getPatInfo")
     public HashMap getPatInfo(@RequestParam("orgId")String orgId,@RequestParam("medRecordId")String medRecordId){
-        return restTemplate.getForObject("http://service-provider-heartfailure/getPatInfo?orgId=" + orgId + "&medRecordId=" +medRecordId,HashMap.class);
+        return restTemplate.getForObject(providerUrl+"/getPatInfo?orgId=" + orgId + "&medRecordId=" +medRecordId,HashMap.class);
     }
     @GetMapping("/getPatInfoTest")
     public HashMap getPatInfoTest(){
-        return restTemplate.getForObject("http://service-provider-heartfailure/getPatInfoTest",HashMap.class);
+        return restTemplate.getForObject(providerUrl+"/getPatInfoTest",HashMap.class);
     }
 }

@@ -4,6 +4,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8671/eureka/
+
+serverUrl: "http://service-provider-heartfailure"
+
 spring:
   application:
     name: service-consumer
